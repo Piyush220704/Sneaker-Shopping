@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nike Sign-up Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("https://images.unsplash.com/photo-1629723095068-d1d3f04cc1fe?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 2rem;
+            width: 30rem;
+            text-align: left;
+            background-color: white;
+            box-shadow: 9px 9px 114px 5px rgba(0,0,0,0.72);
+            -webkit-box-shadow: 9px 9px 114px 5px rgba(0,0,0,0.72);
+            -moz-box-shadow: 9px 9px 114px 5px rgba(0,0,0,0.72);
+        }
+
+        .row {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .password-requirements {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <form id="sign-up-form">
+            <div class="row">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="code" name="code" required>
+            </div>
+            <div class="row">
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="row">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" required>
+                <p class="password-requirements">Minimum of 8 characters, uppercase, lowercase letters, and one number
+                </p>
+            </div>
+            <div class="row">
+                <label for="shoppingPreference">Shopping Preference*</label>
+                <select id="shoppingPreference" name="shoppingPreference">
+                    <option value="men">Men</option>
+                    <option value="women">Women</option>
+                    <option value="kids">Kids</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="dob">Date of Birth*</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            
+            <div class="row">
+                <button type="submit">Create Account</button>
+            </div>
+            
+            <div class="row">
+                <input type="checkbox" id="emailUpdates" name="emailUpdates">
+                <label for="emailUpdates">Sign up for emails to get updates from Nike on products, offers and your
+                    Member benefits.</label>
+            </div>
+            <div class="row policy-text">
+                I agree to Nike's Privacy Policy and Terms of Use.
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("sign-up-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    });
+    </script>
+
+</body>
+
+</html>
